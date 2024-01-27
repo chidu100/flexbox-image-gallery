@@ -1,0 +1,52 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    flex: 1 1 200px; /* Adjust the flex-basis value to control image size */
+    object-fit: cover;
+    width: 100%;
+    height: 200px; /* Adjust height as per your design */
+    border-radius: 5px; /* Optional for rounded corners */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    background-color: green;
+    border: 2px solid transparent;
+}
+
+nav li:hover {
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* to make the display show */
+nav li:hover .dropdown {
+    display: block;
+    color: white;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .gallery img {
+        flex-basis: 100%;
+    }
+}
